@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="1080" pageHeight="595" orientation="Landscape" columnWidth="1040" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ba9e8c74-1739-411d-a78e-34f926e3c65c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="68"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="tglMasalah" class="java.util.Date">
+		<fieldDescription><![CDATA[tglMasalah]]></fieldDescription>
+	</field>
+	<field name="tglDone" class="java.util.Date">
+		<fieldDescription><![CDATA[tglDone]]></fieldDescription>
+	</field>
+	<field name="namaprojek" class="java.lang.String">
+		<fieldDescription><![CDATA[prom.namaprojek]]></fieldDescription>
+	</field>
+	<field name="noEt" class="java.lang.String">
+		<fieldDescription><![CDATA[noEt]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[etm.id]]></fieldDescription>
+	</field>
+	<field name="namaPerangkat" class="java.lang.String">
+		<fieldDescription><![CDATA[etm.namaPerangkat]]></fieldDescription>
+	</field>
+	<field name="problem" class="java.lang.String">
+		<fieldDescription><![CDATA[problem]]></fieldDescription>
+	</field>
+	<field name="solusi" class="java.lang.String">
+		<fieldDescription><![CDATA[solusi]]></fieldDescription>
+	</field>
+	<field name="jenisLaporan" class="java.lang.String">
+		<fieldDescription><![CDATA[jenisLaporan]]></fieldDescription>
+	</field>
+	<field name="picafter" class="java.lang.Object">
+		<fieldDescription><![CDATA[picafter]]></fieldDescription>
+	</field>
+	<field name="picbefore" class="java.lang.Object">
+		<fieldDescription><![CDATA[picbefore]]></fieldDescription>
+	</field>
+	<field name="PICaafter" class="java.sql.Blob">
+		<fieldDescription><![CDATA[PICaafter]]></fieldDescription>
+	</field>
+	<field name="PICabefore" class="java.sql.Blob">
+		<fieldDescription><![CDATA[PICabefore]]></fieldDescription>
+	</field>
+	<variable name="No" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$V{No}+1]]></variableExpression>
+		<initialValueExpression><![CDATA[1]]></initialValueExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="55" splitType="Stretch">
+			<frame>
+				<reportElement uuid="0435734a-e3b4-45c5-8adf-367a220d88aa" mode="Opaque" x="0" y="0" width="1040" height="50" backcolor="#FFFF00"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<staticText>
+					<reportElement uuid="4506cafb-cb9c-457b-b69f-56169177025f" x="0" y="0" width="1040" height="50"/>
+					<textElement textAlignment="Center">
+						<font fontName="Comic Sans MS" size="26"/>
+					</textElement>
+					<text><![CDATA[Dokumentasi Pergantian Barang]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="3223297a-d874-44c6-bcf9-88a8b0626773" mode="Opaque" x="0" y="0" width="40" height="28" backcolor="#00CCFF"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="246fef44-5933-4c1c-9150-67f9cc30be48" mode="Opaque" x="40" y="0" width="100" height="28" backcolor="#00CCFF"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tgl Awal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bc892e5a-de40-44b6-b5b6-1295e4737393" mode="Opaque" x="140" y="0" width="100" height="28" backcolor="#00CCFF"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tgl Done]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b039696d-eceb-493b-ac0d-1dde337def2f" mode="Opaque" x="240" y="0" width="100" height="28" backcolor="#00CCFF"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No Tiket]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="844b1ea5-955e-46ac-a8cd-f2a7fd1d0045" mode="Opaque" x="340" y="0" width="100" height="28" backcolor="#00CCFF"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Perangkat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1aca6ef8-f314-4312-b418-486f499ae018" mode="Opaque" x="440" y="0" width="100" height="28" backcolor="#00CCFF"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="43e7b160-38e0-4770-862e-611aeb2ffaff" mode="Opaque" x="540" y="0" width="156" height="28" backcolor="#00CCFF"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Problem]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8d1a82a5-7f4f-4719-aab7-06f01c46cbe0" mode="Opaque" x="696" y="0" width="100" height="28" backcolor="#00CCFF"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[picbefore]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="33196745-93ac-4640-8e63-5c990f98566c" mode="Opaque" x="796" y="0" width="144" height="28" backcolor="#00CCFF"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Solusi]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="118" splitType="Stretch">
+			<textField>
+				<reportElement uuid="bd8d4e45-4a5f-4f93-877e-899528cf2fb9" x="40" y="0" width="100" height="98"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tglMasalah}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c08ced62-28aa-4ae1-9009-e3a8010b0e1d" x="0" y="0" width="40" height="98"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{No}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b1b84dde-e458-4fa4-bd85-58fbd3afb08e" x="140" y="0" width="100" height="98"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tglDone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4272cf5b-410b-456b-82b2-e4eb08bbeac3" x="240" y="0" width="100" height="98"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{noEt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fef55d06-12d7-4a29-a5b0-930bcdcbc704" x="340" y="0" width="100" height="98"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{namaPerangkat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6f66217c-bfda-40ad-bf13-f2bdf03ea333" x="440" y="0" width="100" height="98"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="433ca497-3e36-4570-bc99-253d2f5ab1c8" x="540" y="0" width="156" height="98"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{problem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3ad69e96-7871-4e6b-a659-5855fc4b2851" x="796" y="0" width="144" height="98"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{solusi}]]></textFieldExpression>
+			</textField>
+			<image isUsingCache="true" onErrorType="Icon">
+				<reportElement uuid="873a8b2c-327b-4bfa-9433-64a4c6afb320" x="696" y="0" width="100" height="98"/>
+				<imageExpression><![CDATA[$F{PICabefore}.getBinaryStream()]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

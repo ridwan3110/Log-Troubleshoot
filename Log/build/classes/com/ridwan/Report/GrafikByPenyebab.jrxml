@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0a67da0d-90af-47d2-9e78-c738ffb601e1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="Periode" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="prom" class="com.ridwan.Model.ProjectModel">
+		<fieldDescription><![CDATA[prom]]></fieldDescription>
+	</field>
+	<field name="namaprojek" class="java.lang.String">
+		<fieldDescription><![CDATA[prom.namaprojek]]></fieldDescription>
+	</field>
+	<field name="count" class="java.lang.Integer">
+		<fieldDescription><![CDATA[count]]></fieldDescription>
+	</field>
+	<field name="namaPerangkat" class="java.lang.String">
+		<fieldDescription><![CDATA[namaPerangkat]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<frame>
+				<reportElement uuid="61ca2a82-728c-4253-9528-d525058f90c1" mode="Opaque" x="0" y="0" width="802" height="79" backcolor="#00FFFF"/>
+				<staticText>
+					<reportElement uuid="c34a2835-8ebd-4052-8218-09efc996f6c9" x="0" y="0" width="303" height="46" forecolor="#003399"/>
+					<textElement>
+						<font size="30" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Grafik Permasalahan]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="538b0ecc-9cae-4fd9-a779-610968ef49ac" x="153" y="57" width="495" height="22"/>
+					<textElement textAlignment="Center">
+						<font size="13" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{Periode}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="6b7295b5-6017-41f3-99ef-1af520d14e86" x="303" y="0" width="135" height="46"/>
+					<textElement textAlignment="Center">
+						<font size="30"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{namaprojek}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="c34a2835-8ebd-4052-8218-09efc996f6c9" x="438" y="0" width="364" height="46" forecolor="#003399"/>
+					<textElement>
+						<font size="30" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Berdasarkan Penyebab]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<summary>
+		<band height="339" splitType="Stretch">
+			<pie3DChart>
+				<chart>
+					<reportElement uuid="722da243-006c-4730-9c3f-cb6075dc28ba" x="0" y="0" width="802" height="339"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<keyExpression><![CDATA[$F{namaPerangkat}]]></keyExpression>
+					<valueExpression><![CDATA[$F{count}]]></valueExpression>
+				</pieDataset>
+				<pie3DPlot>
+					<plot/>
+					<itemLabel/>
+				</pie3DPlot>
+			</pie3DChart>
+		</band>
+	</summary>
+</jasperReport>
